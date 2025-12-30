@@ -1,1 +1,33 @@
-ed
+name: Coordination | Scope Collision Check
+
+on:
+  issues:
+    types: [opened, edited, labeled, unlabeled, reopened]
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+permissions:
+  issues: write
+  pull-requests: write
+  contents: read
+
+jobs:
+  scope-collision:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run collision check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COORD_MODE: "warn" # options: warn | block
+        run: |
+          python .github/scripts/scope_collision.py
+
+      # If COORD_MODE=block and a collision is found, the script exits non-zero and this job fails.
