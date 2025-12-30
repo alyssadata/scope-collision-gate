@@ -1,1 +1,28 @@
+name: Coordination Work Item
+description: Work item that includes literal SCOPE/INTENT lines for collision detection.
+title: "Work: <short title>"
+labels: ["coordination"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        IMPORTANT: Do not remove or rename the labels "SCOPE:" and "INTENT:".
+        The scope collision check parses the issue body text.
+
+  - type: textarea
+    id: work_item
+    attributes:
+      label: Work item (required)
+      description: Keep the labels exactly as written. Fill in the values.
+      value: |
+        SCOPE: demo-scope
+        INTENT: <what you are doing and why>
+
+        CHANGE_SURFACE:
+        - <paths/modules you expect to touch>
+
+        ACCEPTANCE:
+        - <what done means>
+    validations:
+      required: true
 
