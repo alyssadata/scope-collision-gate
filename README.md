@@ -38,3 +38,5 @@ Set `COORD_MODE` in the workflow:
 ## Notes
 - No auto-merge, no auto-approve
 - Auditable via PR comments and GitHub Actions logs
+
+Portfolio map: https://github.com/alyssadata/PORTFOLIO_MAP.md
