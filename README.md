@@ -2,6 +2,12 @@
 
 GitHub-native coordination gate that detects scope overlap across open Issues and PRs. Supports warn-only mode or merge-blocking mode via required checks.
 
+## Why This Matters
+
+Coordination failures in software development occur when multiple contributors work on overlapping scope without awareness, leading to merge conflicts, duplicated effort, and integration problems. This gate provides automated boundary detection to prevent scope collisions before they reach the main branch.
+
+This approach mirrors AI safety evaluation methodology: detect boundary violations early, maintain clear scope separation, and preserve audit trails. The same systematic thinking applies to preventing AI systems from absorbing conflicting instructions or merging user intent into core identity.
+
 ## Canonical format (do not change labels)
 This gate parses literal labels from Issue bodies and PR descriptions:
 
