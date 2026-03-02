@@ -46,3 +46,5 @@ Set `COORD_MODE` in the workflow:
 - Auditable via PR comments and GitHub Actions logs
 
 Portfolio map: https://github.com/alyssadata/PORTFOLIO_MAP.md
+
+Interface stability: the canonical labels are part of the v1.0 contract.
